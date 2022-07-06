@@ -1,0 +1,9 @@
+1.新建访达窗口，shift command G 三个键进入文件夹页面。
+2.输入	/etc/hosts 
+3.找到hosts文件
+4.复制到桌面，在该文件加入以下内容：
+http://github.com 204.232.175.94 http://gist.github.com 107.21.116.220
+http://help.github.com 207.97.227.252 http://nodeload.github.com 199.27.76.130
+http://raw.github.com 107.22.3.110 http://status.github.com 204.232.175.78 
+http://training.github.com 207.97.227.243 http://www.github.com
+5.保存，复制到/etc文件夹中，记得先删除原来的hosts文件。
