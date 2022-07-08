@@ -40,3 +40,48 @@
   GitHub
   创建SSH Key:(Git与GitHub是通过SSH加密)
   ssh-keygen -t rsa -C "youremail@example.com"
+  GitHub上创建账号并创建新仓库“Create repository”
+  (1) 与本地的Git仓库关联：
+  在本地的仓库‘github-learning’下运行：
+  git remote add origin git@github.com:xefang/GitHub
+  (2) 将本地库的所有内容推送到远程GitHub上：
+  git push -u origin master
+  推送后远程库的内容与本地一样
+  之后，只要本地做了提交，通过命令：
+  git push origin master
+  把本地master分支的最新修改推送至GitHub上。
+  
+  git remote -v
+  查看远程库信息
+
+  删除远程库：
+  git remote rm <name>
+  这里的删除其实是解除了本地和远程的绑定关系，并不是物理上删除了远程库。远程库本身并没有任何改动。要真正删除远程库，需要登录到GitHub，在后台页面找到删除按钮再删除。
+
+9. 从远程库克隆
+  先在GitHub上创建新仓库以及新文件或者copy别人的。
+  用命令git clone克隆一个本地库：
+  git clone git@github.com:xefang/command.git
+  即可
+
+10. 创建与合并分支
+  HEAD严格说不是指向提交，而是指向当前分支master，master才是指向提交。
+  分支的作用：多人合作或者多向编辑
+  创建并切换到dev分支：
+  git checkout -b dev
+  相当于两条命令：
+  git branch dev
+  git checkout dev
+
+  用命令git branch可以查看当前分支，当前分支有*号。
+  合并分支：
+  git merge dev
+  该命令用于合并指定分支到当前分支，即合并dev分支到当前分支master。
+  删除分支：
+  git branch -d dev
+
+  除了用git checkout 切换分支，还可以git switch切换分支。
+  创建并切换到dev分支：
+  git switch -c dev
+  直接切换到已有的dev分支：
+  git switch dev
